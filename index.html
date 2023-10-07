@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #ececec;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        h2:nth-child(3) {
+            min-width: 80px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #ececec;
+            padding: 8px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        // primeiro, precisamos de um listener para o evento keydown
+        document.addEventListener('keydown', function (event) {
+            // a propriedade 'key' do evento contém a tecla pressionada
+            var tecla = event.keyCode;
+            console.log(tecla)
+            let Tecla = document.getElementById('tecla');
+            Tecla.innerHTML = `A tecla `;
+
+            // agora, podemos usar uma estrutura switch para identificar a tecla
+            switch (tecla) {
+                case 8: console.log(`${tecla} = backspace`);
+                    Tecla.innerHTML = `backspace`;
+                    break;
+                case 9: console.log(`${tecla} = tab`);
+                    Tecla.innerHTML = `tab`;
+                    break;
+                case 13: console.log(`${tecla} = enter`);
+                    Tecla.innerHTML = `enter`;
+                    break;
+                case 16: console.log(`${tecla} = shift(esquerda)`);
+                    Tecla.innerHTML = `shift(esquerda)`;
+                    break;
+                case 16: console.log(`${tecla} = shift(direita)`);
+                    Tecla.innerHTML = `shift(direita)`;
+                    break;
+                case 17: console.log(`${tecla} = ctrl(esquerda)`);
+                    Tecla.innerHTML = `ctrl(esquerda)`;
+                    break;
+                case 17: console.log(`${tecla} = ctrl(direita)`);
+                    Tecla.innerHTML = `ctrl(direita)`;
+                    break;
+                case 18: console.log(`${tecla} = alt(esquerda)`);
+                    Tecla.innerHTML = `alt(esquerda)`;
+                    break;
+                case 18: console.log(`${tecla} = alt(direita)`);
+                    Tecla.innerHTML = `alt(direita)`;
+                    break;
+                case 19: console.log(`${tecla} = pause /break`);
+                    Tecla.innerHTML = `pause/break`;
+                    break;
+                case 20: console.log(`${tecla} = caps lock`);
+                    Tecla.innerHTML = `caps lock`;
+                    break;
+                case 27: console.log(`${tecla} = escape`);
+                    Tecla.innerHTML = `escape`;
+                    break;
+                case 32: console.log(`${tecla} = barra de espaço`);
+                    Tecla.innerHTML = `barra de espaço`;
+                    break;
+                case 33: console.log(`${tecla} = page up`);
+                    Tecla.innerHTML = `page up`;
+                    break;
+                case 34: console.log(`${tecla} = page down`);
+                    Tecla.innerHTML = `page down`;
+                    break;
+                case 35: console.log(`${tecla} = end`);
+                    Tecla.innerHTML = `end`;
+                    break;
+                case 36: console.log(`${tecla} = home`);
+                    Tecla.innerHTML = `home`;
+                    break;
+                case 37: console.log(`${tecla} = seta da esquerda`);
+                    Tecla.innerHTML = `seta da esquerda`;
+                    break;
+                case 38: console.log(`${tecla} = seta para cima`);
+                    Tecla.innerHTML = `seta para cima`;
+                    break;
+                case 39: console.log(`${tecla} = seta da direita`);
+                    Tecla.innerHTML = `seta da direita`;
+                    break;
+                case 40: console.log(`${tecla} = seta para baixo`);
+                    Tecla.innerHTML = `seta para baixo`;
+                    break;
+                case 44: console.log(`${tecla} = print screen`);
+                    Tecla.innerHTML = `print screen`;
+                    break;
+                case 45: console.log(`${tecla} = insert`);
+                    Tecla.innerHTML = `insert`;
+                    break;
+                case 46: console.log(`${tecla} = delete`);
+                    Tecla.innerHTML = `delete`;
+                    break;
+                case 48: console.log(`${tecla} = 0`);
+                    Tecla.innerHTML = `0`;
+                    break;
+                case 49: console.log(`${tecla} = 1`);
+                    Tecla.innerHTML = `1`;
+                    break;
+                case 50: console.log(`${tecla} = 2`);
+                    Tecla.innerHTML = `2`;
+                    break;
+                case 51: console.log(`${tecla} = 3`);
+                    Tecla.innerHTML = `3`;
+                    break;
+                case 52: console.log(`${tecla} = 4`);
+                    Tecla.innerHTML = `4`;
+                    break;
+                case 53: console.log(`${tecla} = 5`);
+                    Tecla.innerHTML = `5`;
+                    break;
+                case 54: console.log(`${tecla} = 6`);
+                    Tecla.innerHTML = `6`;
+                    break;
+                case 55: console.log(`${tecla} = 7`);
+                    Tecla.innerHTML = `7`;
+                    break;
+                case 56: console.log(`${tecla} = 8`);
+                    Tecla.innerHTML = `8`;
+                    break;
+                case 57: console.log(`${tecla} = 9`);
+                    Tecla.innerHTML = `9`;
+                    break;
+                case 65: console.log(`${tecla} = a`);
+                    Tecla.innerHTML = `a`;
+                    break;
+                case 66: console.log(`${tecla} = b`);
+                    Tecla.innerHTML = `b`;
+                    break;
+                case 67: console.log(`${tecla} = c`);
+                    Tecla.innerHTML = `c`;
+                    break;
+                case 68: console.log(`${tecla} = d`);
+                    Tecla.innerHTML = `d`;
+                    break;
+                case 69: console.log(`${tecla} = e`);
+                    Tecla.innerHTML = `e`;
+                    break;
+                case 70: console.log(`${tecla} = f`);
+                    Tecla.innerHTML = `f`;
+                    break;
+                case 71: console.log(`${tecla} = g`);
+                    Tecla.innerHTML = `g`;
+                    break;
+                case 72: console.log(`${tecla} = h`);
+                    Tecla.innerHTML = `h`;
+                    break;
+                case 73: console.log(`${tecla} = i`);
+                    Tecla.innerHTML = `i`;
+                    break;
+                case 74: console.log(`${tecla} = j`);
+                    Tecla.innerHTML = `j`;
+                    break;
+                case 75: console.log(`${tecla} = k`);
+                    Tecla.innerHTML = `k`;
+                    break;
+                case 76: console.log(`${tecla} = l`);
+                    Tecla.innerHTML = `l`;
+                    break;
+                case 77: console.log(`${tecla} = m`);
+                    Tecla.innerHTML = `m`;
+                    break;
+                case 78: console.log(`${tecla} = n`);
+                    Tecla.innerHTML = `n`;
+                    break;
+                case 79: console.log(`${tecla} = o`);
+                    Tecla.innerHTML = `o`;
+                    break;
+                case 80: console.log(`${tecla} = p`);
+                    Tecla.innerHTML = `p`;
+                    break;
+                case 81: console.log(`${tecla} = q`);
+                    Tecla.innerHTML = `q`;
+                    break;
+                case 82: console.log(`${tecla} = r`);
+                    Tecla.innerHTML = `r`;
+                    break;
+                case 83: console.log(`${tecla} = s`);
+                    Tecla.innerHTML = `s`;
+                    break;
+                case 84: console.log(`${tecla} = t`);
+                    Tecla.innerHTML = `t`;
+                    break;
+                case 85: console.log(`${tecla} = u`);
+                    Tecla.innerHTML = `u`;
+                    break;
+                case 86: console.log(`${tecla} = v`);
+                    Tecla.innerHTML = `v`;
+                    break;
+                case 87: console.log(`${tecla} = w`);
+                    Tecla.innerHTML = `w`;
+                    break;
+                case 88: console.log(`${tecla} = x`);
+                    Tecla.innerHTML = `x`;
+                    break;
+                case 89: console.log(`${tecla} = y`);
+                    Tecla.innerHTML = `y`;
+                    break;
+                case 90: console.log(`${tecla} = z`);
+                    Tecla.innerHTML = `z`;
+                    break;
+                case 91: console.log(`${tecla} = tecla do Windows esquerda`);
+                    Tecla.innerHTML = `Windows esquerda`;
+                    break;
+                case 92: console.log(`${tecla} = tecla do Windows direita`);
+                    Tecla.innerHTML = `Windows direita`;
+                    break;
+                case 93: console.log(`${tecla} = tecla select(menu de contexto)`);
+                    Tecla.innerHTML = `select (menu de contexto)`;
+                    break;
+                case 96: console.log(`${tecla} = numpad 0`);
+                    Tecla.innerHTML = `numpad 0`;
+                    break;
+                case 97: console.log(`${tecla} = numpad 1`);
+                    Tecla.innerHTML = `numpad 1`;
+                    break;
+                case 98: console.log(`${tecla} = numpad 2`);
+                    Tecla.innerHTML = `numpad 2`;
+                    break;
+                case 99: console.log(`${tecla} = numpad 3`);
+                    Tecla.innerHTML = `numpad 3`;
+                    break;
+                case 100: console.log(`${tecla} = numpad 4`);
+                    Tecla.innerHTML = `numpad 4`;
+                    break;
+                case 101: console.log(`${tecla} = numpad 5`);
+                    Tecla.innerHTML = `numpad 5`;
+                    break;
+                case 102: console.log(`${tecla} = numpad 6`);
+                    Tecla.innerHTML = `numpad 6`;
+                    break;
+                case 103: console.log(`${tecla} = numpad 7`);
+                    Tecla.innerHTML = `numpad 7`;
+                    break;
+                case 104: console.log(`${tecla} = numpad 8`);
+                    Tecla.innerHTML = `numpad 8`;
+                    break;
+                case 105: console.log(`${tecla} = numpad 9`);
+                    Tecla.innerHTML = `numpad 9`;
+                    break;
+                case 106: console.log(`${tecla} = multiplicar`);
+                    Tecla.innerHTML = `multiplicar`;
+                    break;
+                case 107: console.log(`${tecla} = somar`);
+                    Tecla.innerHTML = `somar`;
+                    break;
+                case 109: console.log(`${tecla} = subtrair`);
+                    Tecla.innerHTML = `subtrair`;
+                    break;
+                case 110: console.log(`${tecla} = ponto / vírgula decimal`);
+                    Tecla.innerHTML = `ponto/vírgula decimal`;
+                    break;
+                case 111: console.log(`${tecla} = dividir`);
+                    Tecla.innerHTML = `dividir`;
+                    break;
+                case 112: console.log(`${tecla} = f1`);
+                    Tecla.innerHTML = `f1`;
+                    break;
+                case 113: console.log(`${tecla} = f2`);
+                    Tecla.innerHTML = `f2`;
+                    break;
+                case 114: console.log(`${tecla} = f3`);
+                    Tecla.innerHTML = `f3`;
+                    break;
+                case 115: console.log(`${tecla} = f4`);
+                    Tecla.innerHTML = `f4`;
+                    break;
+                case 116: console.log(`${tecla} = f5`);
+                    Tecla.innerHTML = `f5`;
+                    break;
+                case 117: console.log(`${tecla} = f6`);
+                    Tecla.innerHTML = `f6`;
+                    break;
+                case 118: console.log(`${tecla} = f7`);
+                    Tecla.innerHTML = `f7`;
+                    break;
+                case 119: console.log(`${tecla} = f8`);
+                    Tecla.innerHTML = `f8`;
+                    break;
+                case 120: console.log(`${tecla} = f9`);
+                    Tecla.innerHTML = `f9`;
+                    break;
+                case 121: console.log(`${tecla} = f10`);
+                    Tecla.innerHTML = `f10`;
+                    break;
+                case 122: console.log(`${tecla} = f11`);
+                    Tecla.innerHTML = `f11`;
+                    break;
+                case 123: console.log(`${tecla} = f12`);
+                    Tecla.innerHTML = `f12`;
+                    break;
+                case 144: console.log(`${tecla} = num lock`);
+                    Tecla.innerHTML = `num lock`;
+                    break;
+                case 145: console.log(`${tecla} = scroll lock`);
+                    Tecla.innerHTML = `scroll lock`;
+                    break;
+                case 173: console.log(`${tecla} = volume do áudio muto`);
+                    Tecla.innerHTML = `volume do áudio muto`;
+                    break;
+                case 174: console.log(`${tecla} = baixar volume do áudio`);
+                    Tecla.innerHTML = `baixar volume do áudio`;
+                    break;
+                case 175: console.log(`${tecla} = subir volume do áudio`);
+                    Tecla.innerHTML = `subir volume do áudio`;
+                    break;
+                case 181: console.log(`${tecla} = media player`);
+                    Tecla.innerHTML = `media player`;
+                    break;
+                case 182: console.log(`${tecla} = executar aplicação 1`);
+                    Tecla.innerHTML = `executar aplicação 1`;
+                    break;
+                case 183: console.log(`${tecla} = executar aplicação 2`);
+                    Tecla.innerHTML = `executar aplicação 2`;
+                    break;
+                case 186: console.log(`${tecla} = ponto e vírgula`);
+                    Tecla.innerHTML = `ponto e vírgula`;
+                    break;
+                case 187: console.log(`${tecla} = sinal de igual`);
+                    Tecla.innerHTML = `sinal de igual`;
+                    break;
+                case 188: console.log(`${tecla} = vírgula`);
+                    Tecla.innerHTML = `vírgula`;
+                    break;
+                case 189: console.log(`${tecla} = travessão`);
+                    Tecla.innerHTML = `travessão`;
+                    break;
+                case 190: console.log(`${tecla} = ponto`);
+                    Tecla.innerHTML = `ponto`;
+                    break;
+                case 191: console.log(`${tecla} = barra para frente`);
+                    Tecla.innerHTML = `barra para frente`;
+                    break;
+                case 192: console.log(`${tecla} = crase`);
+                    Tecla.innerHTML = `crase`;
+                    break;
+                case 219: console.log(`${tecla} = abre colchetes`);
+                    Tecla.innerHTML = `abre colchetes`;
+                    break;
+                case 220: console.log(`${tecla} = barra para trás`);
+                    Tecla.innerHTML = `barra para trás`;
+                    break;
+                case 221: console.log(`${tecla} = fecha colchetes`);
+                    Tecla.innerHTML = `fecha colchetes`;
+                    break;
+                case 222: console.log(`${tecla} = aspa simples`);
+                    Tecla.innerHTML = `aspa simples`;
+                    break;
+
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Pressione uma tecla</h1>
+        <h2>A tecla</h2>
+        <h2><span id="tecla"></span></h2>
+
+        <h2>foi pressionada</h2>
+    </div>
+
+</body>
+
+</html>
